@@ -1,10 +1,8 @@
 
 /******* main **********/
 body {
-    padding-top: 50px !important;
-    padding-left: 0px !important;
-    padding-right: 0px !important;
-    padding-bottom: 0px!important;
+padding: 0px;
+    margin-top: 50px;
     
 }
 
@@ -27,7 +25,7 @@ li {
 .HeaderContainer {
     width: 100%;
     background-color: #99AD99;
-    height: 45px;
+    height: 9.7%;
     position: fixed;
     top: 0;
 }
@@ -35,30 +33,31 @@ li {
 .IcoHeaderLeft {
     float: left;
     text-align: center;
-    padding-top: 2px;
+    padding-top:1%;
 	    padding-left: 5px;
 }
 .IcoHeaderRight {
     float: right;
     text-align: center;
-    padding-top: 2px;
+    padding-top: 1%;
 		    padding-right: 5px;
 }
 .TitleHeader {
     text-align: center;
-    padding-top: 10.5px;
+    padding-top: 3%;
     display: inline-block;
 }
 
-/******* Flyer *******/
+/******* Cover *******/
 
-.Flyer{
-    width: 51.7%;
-margin: auto;
+.Cover{
+    width: 75%;
+    margin: auto;
+    margin-top: 10px;
 }
-.Tags{
+.CoverTags{
     width: 100%;
-    height: 28px;
+    height: 10.6%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     margin: auto;
@@ -68,31 +67,32 @@ margin: auto;
     padding-right: 6px;
 }
 
-.FlyerImg {
+.CoverImg {
 	background-image: url('/resources/searoom.jpg');
     background-repeat: no-repeat;
     background-position: center center;
-    height: calc(100% - 62.8px);
-	    background-size: 100%;
+    height: calc(100% - 21.35%);
+	    background-size: 100% 100%;
 }
-.FlyerFooter{
-    height: 34.8px;
+.CoverFooter{
+    height: 10.75%;
 	background-color: #99AD99;
 	    font-size: 9.52px;
 }
-.Tags img{
-    width: 23.5px;
+.CoverTags img{
+    width: 15.7%;
     float: left;
     margin: 1px;
+        margin-top: 1%;
 }
 .Brands{
 background-color:rgba(255, 255, 255, 0.7);
     font-size: 9.52px;
-    height: 38px;
+    height: 16.27%;
     
 }
-.FlyerBody{
-    height: calc(100% - 19.8px);
+.CoverBody{
+    height: calc(100% -  16.27%);
 	background-color:rgba(255, 255, 255, 0.3);
 	font-size:15.68px;
 		padding:3px;

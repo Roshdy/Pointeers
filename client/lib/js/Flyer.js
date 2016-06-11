@@ -1,9 +1,9 @@
 Template.Flyer.onRendered(function() {
 
     function setFlyerHeight(){
-	var FlyerWidth = $('#Flyer').outerWidth();
+	var FlyerWidth = $('.Cover').outerWidth();
     var FlyerNewHeight = FlyerWidth * 1.785;
-  $('#Flyer').css('height', FlyerNewHeight);
+  $('.Cover').css('height', FlyerNewHeight);
   };
   setFlyerHeight();
   
@@ -11,18 +11,18 @@ Template.Flyer.onRendered(function() {
   setFlyerHeight();
   });
 
-function setMargin() {
-   var TotalHeight = $(window).outerHeight() - $('#Header').outerHeight();
-   var FlyerHeight = $('#Flyer').outerHeight();
-   var MarginTop = (TotalHeight - FlyerHeight)/2;  
-    $('#Flyer').css('margin-top',MarginTop + "px");
-  };
-  
-    setMargin();
-  
-  $(window).resize(function() {
-    setMargin();
-  });
+//function setMargin() {
+//   var TotalHeight = $(window).outerHeight() - $('#Header').outerHeight();
+//   var FlyerHeight = $('.Cover').outerHeight();
+//   var MarginTop = (TotalHeight - FlyerHeight)/2;  
+//    $('.Cover').css('margin-top',MarginTop + "px");
+//  };
+//  
+//    setMargin();
+//  
+//  $(window).resize(function() {
+//    setMargin();
+//  });
   
 
 });
