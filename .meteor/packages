@@ -4,20 +4,53 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-meteor-base             # Packages every Meteor app needs to have
-mobile-experience       # Packages for a great mobile UX
-mongo                   # The database Meteor supports right now
-blaze-html-templates    # Compile .html files into Meteor Blaze views
-reactive-var            # Reactive variable for tracker
-jquery                  # Helpful client-side library
-tracker                 # Meteor's client-side reactive programming library
+################### ESSENTIALS ###################
+meteor-base             		# Packages every Meteor app needs to have.
+mobile-experience       		# Packages for a great mobile UX.
+mongo                   		# The database Meteor supports right now.
+blaze-html-templates    		# Compile .html files into Meteor Blaze views.
+reactive-var            		# Reactive variable for tracker.
+jquery                  		# Helpful client-side library.
+tracker                 		# Meteor's client-side reactive programming library.
+standard-minifier-css   		# CSS minifier run for production mode.
+standard-minifier-js    		# JS minifier run for production mode.
+es5-shim                		# ECMAScript 5 compatibility for older browsers.
+ecmascript              		# Enable ECMAScript2015+ syntax in app code.
+spiderable						# Allows web engines to index meteor app
+fastclick 						# Touch support for less laggy UX.
+session							# Enables the usage of client session variable.
+check 							# Argument checking and general pattern matching.
+datariot:ganalytics				# Google Analytics.
+###################################################
 
-standard-minifier-css   # CSS minifier run for production mode
-standard-minifier-js    # JS minifier run for production mode
-es5-shim                # ECMAScript 5 compatibility for older browsers.
-ecmascript              # Enable ECMAScript2015+ syntax in app code
+#=================== TEMPORARY ===================#
+meteortoys:allthings
+###################################################
 
-autopublish             # Publish all data to the clients (for prototyping)
-insecure                # Allow all DB writes from clients (for prototyping)
-bootstrap
-iron:router
+#################### Routing ######################
+kadira:flow-router				# Routing package.
+kadira:blaze-layout				# Layouts manager.
+zimme:active-route 				# Check the current active route in layouts.
+###################################################
+
+#################### Styling ######################
+bootstrap 						# Twitter bootstrap.
+stolinski:stylus-multi 			# CSS Pre-Processor.
+fortawesome:fontawesome 		# Fontawesome icon packages.
+###################################################
+
+################ DB - Collections #################
+dburles:collection-helpers 		# Handle collections like templates.
+raix:handlebar-helpers			# A simple way to use sessions and collections in templates.
+aldeed:collection2				# Allows you to attach a schema to a Mongo.Collection.
+aldeed:autoform					# Easily insert and update collections through UI.
+###################################################
+
+################## Authentication #################
+useraccounts:unstyled			# Meteor user accounts unstyled
+aldeed:template-extension		# Overriding user accounts form templates
+accounts-password				# A login service that enables secure password-based login.
+accounts-oauth 					# Common code for OAuth-based login services.
+alanning:roles					# Authorization package for Meteor.
+gwendall:auth-client-callbacks 	# Adds client-side onLogin and onLogout methods.
+###################################################
