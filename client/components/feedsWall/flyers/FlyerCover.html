@@ -1,26 +1,22 @@
-<!--
 <template name="FlyerCover">
-	<div class="flyer-cover">
-		<img src="{{coverImage}}" alt="Flyer Cover" class="flyer-cover-img">
-
+	<div class="flyer-cover {{#if isRep}}hasRep{{/if}}">
 		<header class="flyer-cover-header">
 			<div class="brands-logos">
-				<img src="/images/Header-04.png" alt="Brand Logo" class="brand-logo">
-
+				<img src="{{brandLogo}}" alt="Brand Logo" class="brand-logo">
 				{{#if isRep}}
-					<img src="/images/builder-logo.png" alt="Rep Logo" class="rep-logo">
+					<img src="{{repLogo}}" alt="Rep Logo" class="rep-logo">
 				{{/if}}
 			</div>
 			<div class="brands-names">
 				<p class="brand-name">{{brandName}}</p>
-
 				{{#if isRep}}
 					<p class="rep-name">{{repName}}</p>
 				{{/if}}
+				<p class="timestamp">{{timestamp}}</p>
 			</div>
 		</header>
 
-		<main class="flyer-cover-main">
+		<main class="flyer-cover-main {{aspectClass}}" style="background-image: url({{coverImage}})">
 			<p class="flyer-title">{{{title}}}</p>
 
 			{{#if hasPrice}}
@@ -35,4 +31,3 @@
 		</footer>
 	</div>
 </template>
--->

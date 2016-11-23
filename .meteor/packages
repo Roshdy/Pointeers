@@ -20,7 +20,7 @@ spiderable						# Allows web engines to index meteor app
 fastclick 						# Touch support for less laggy UX.
 session							# Enables the usage of client session variable.
 check 							# Argument checking and general pattern matching.
-datariot:ganalytics				# Google Analytics.
+#datariot:ganalytics				# Google Analytics.
 ###################################################
 
 #=================== TEMPORARY ===================#

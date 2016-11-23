@@ -1,4 +1,4 @@
-/*Template.Flyer.helpers({
+Template.Flyer.helpers({
 	loadFlyer: ()=> {		//	var loadFlyer = function (){
 		return false;		//		return false;
 	},						//	}
@@ -6,4 +6,3 @@
 		return null;
 	}
 });
-*/
