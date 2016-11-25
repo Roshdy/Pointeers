@@ -3,6 +3,44 @@ Meteor.startup(() => {
 	Deps.autorun(function() {
         document.title = Session.get('DocTitle');
     });
+    Meteor.autorun(function(){
+    	Meta.set([
+			// Set character set
+	    	{
+			  name: 'charset',
+			  property: 'UTF-8'
+			},
+			// Set viewport for bootstrap
+			{
+			  name: 'name',
+			  property: 'viewport',
+			  content: 'width=device-width, initial-scale=1'
+			},
+	    	// Chrome, Firefox OS and Opera
+			{
+			  name: 'name',
+			  property: 'theme-color',
+			  content: '#4d614d'
+			},
+			// Windows Phone
+			{
+			  name: 'name',
+			  property: 'msapplication-navbutton-color',
+			  content: '#4d614d'
+			},
+			// iOS Safari
+			{
+			  name: 'name',
+			  property: 'apple-mobile-web-app-capable',
+			  content: 'yes'
+			},
+			{
+			  name: 'name',
+			  property: 'apple-mobile-web-app-status-bar-style',
+			  content: 'black'
+			}
+		]);
+    });
 });
 
 // Example: 1000000 = 1M

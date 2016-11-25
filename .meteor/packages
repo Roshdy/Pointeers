@@ -31,6 +31,7 @@ meteortoys:allthings
 kadira:flow-router				# Routing package.
 kadira:blaze-layout				# Layouts manager.
 zimme:active-route 				# Check the current active route in layouts.
+yasinuslu:blaze-meta 			# Add meta tags to blaze head
 ###################################################
 
 #################### Styling ######################
