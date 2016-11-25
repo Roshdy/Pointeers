@@ -4,6 +4,7 @@ Meteor.startup(() => {
         document.title = Session.get('DocTitle');
     });
     Meteor.autorun(function(){
+    	var addbar_color = '#99AD99';
     	Meta.set([
 			// Set character set
 	    	{
@@ -20,13 +21,13 @@ Meteor.startup(() => {
 			{
 			  name: 'name',
 			  property: 'theme-color',
-			  content: '#4d614d'
+			  content: addbar_color
 			},
 			// Windows Phone
 			{
 			  name: 'name',
 			  property: 'msapplication-navbutton-color',
-			  content: '#4d614d'
+			  content: addbar_color
 			},
 			// iOS Safari
 			{
