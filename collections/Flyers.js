@@ -112,13 +112,24 @@ FlyersSchema = new SimpleSchema({
 		type: String,
 		label: 'Price',
 		optional: true
-	}/*,
-	flyerSlide 		: {
-
 	},
-	respectsCount 	: {},
-	reviewsCount 	: {},
-	pointsCount 	: {}*/
+	flyerSlide : {
+		type: [FlyerSlide],
+		defaultValue: [],
+		optional: true
+	},
+	respectsCount : {
+		type: Number,
+		defaultValue: null
+	},
+	reviewsCount : {
+		type: Number,
+		defaultValue: null
+	},
+	pointsCount : {
+		type: Number,
+		defaultValue: null
+	}
 });
 
 // 4- Attach Schema to Collection
