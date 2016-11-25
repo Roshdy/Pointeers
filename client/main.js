@@ -1,3 +1,10 @@
+Meteor.startup(() => {
+	// code to run on server at startup
+	Deps.autorun(function() {
+        document.title = Session.get('DocTitle');
+    });
+});
+
 // Example: 1000000 = 1M
 Number.prototype.formatCount = function(d){
 	var num = parseInt(this);	// In case num was float
