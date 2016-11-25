@@ -6,19 +6,40 @@ Template.FeedsWall.helpers({
 		var flyerObj = {};
 		var aspectClass = '';
 		var hasRep = false;
+		var rnd = 0;
 		var now = new Date();
 		var timestamp = now;
+		var max = 18, min = 1;
+		var randE, randP, randRs, randRv;
 
-		for(var i = 0; i < 5; i++){
-			timestamp.setDate(timestamp.getHours() + i);
+		for(var i = 0; i < 15; i++){
+			timestamp.setDate(timestamp.getHours() - i);
 
-			if(i % 2 == 0){
+			randE = parseInt(Math.random() * (max - min) + min);
+			randRs = Math.random().toFixed(randE).replace(/^0[\.]/g, '');
+			randRs = formatCount(randRs);
+
+			randE = parseInt(Math.random() * (max - min) + min);
+			randRv = Math.random().toFixed(randE).replace(/^0[\.]/g, '');
+			randRv = formatCount(randRv);
+
+			randE = parseInt(Math.random() * (max - min) + min);
+			randP = Math.random().toFixed(randE).replace(/^0[\.]/g, '');
+			randP = formatCount(randP);
+
+			hasRep = Math.random() > 0.5;
+			rnd = parseInt(Math.random() * 100);
+			if(rnd < 25){
 				aspectClass = 'aspect-16-9';
-				hasRep = true;
+			}
+			else if(rnd < 50){
+				aspectClass = 'aspect-9-16';
+			}
+			else if(rnd < 75){
+				aspectClass = 'aspect-1-1';
 			}
 			else{
 				aspectClass = 'aspect-4-3';
-				hasRep = false;
 			}
 
 			for(var j = 0; j < 3; j++){
@@ -46,7 +67,10 @@ Template.FeedsWall.helpers({
 				loadFlyer 		: false,
 				brandLogo 		: '/images/builder-logo.png',
 				repLogo 		: '/images/builder-logo.png',
-				flyerSlide 		: flyerSlides
+				flyerSlide 		: flyerSlides,
+				respectsCount 	: randRs,
+				reviewsCount 	: randRv,
+				pointsCount 	: randP
 			};
 			flyerObjs.push(flyerObj);
 

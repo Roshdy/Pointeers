@@ -1,56 +1,87 @@
 /*************** General ***************/
-.aspect-4-3{
+body
+    background-color: #4d614d !important;
+
+/*************** Shared ***************/
+[class*="aspect"] 
     position: relative;
     width: 100%;
+    > * 
+        position: absolute;
+        top: 0;
+        left: 0;
+.aspect-4-3
     padding-top: 75%;
-}
-.aspect-16-9{
-    position: relative;
-    width: 100%;
+.aspect-16-9
     padding-top: 56.25%;
-}
-.aspect-1-1{
-    position: relative;
-    width: 100%;
+.aspect-9-16
+    padding-top: calc(100% * 1.78);
+.aspect-1-1
     padding-top: 100%;
-}
+p
+    text-overflow: ellipsis;
+
 /*************** AppHeader ***************/
-.AppHeader {
+.AppHeader 
     width: 100%;
     background-color: #99AD99;
     height: 9.7%;
     position: fixed;
     top: 0;
-}
-.header-icon-left {
+.header-icon-left 
     float: left;
     text-align: center;
     padding-top:1%;
     padding-left: 5px;
-}
-.header-icon-right {
+.header-icon-right 
     float: right;
     text-align: center;
     padding-top: 1%;
     padding-right: 5px;
-}
-.header-app-logo {
+.header-app-logo 
     text-align: center;
     padding-top: 3%;
     display: inline-block;
-}
-.main-nav li{
+.main-nav li
     display: inline-block;
-}
+
 /*************** MainLayout ***************/
-.main-layout{
+.main-layout
     width: 96%;
     margin: auto;
-}
+
+/*************** Interaction Buttons ***************/
+.interaction-btn 
+    > .btn
+        background-color: rgba(255,255,255,0.7);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100% 100%;
+        box-sizing: content-box;
+        width: calc(100% - 2px);
+        padding: calc(100% - 2px) 0 0 0;
+        border-radius: 50%;
+    span
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        text-shadow: #222 0.1em 0.1em 0.2em;
+    .title
+        font-weight: bold;
+        color: #fff;
+    .count
+        color: #ececec;
+        font-style: italic;
+.respect-btn
+    background-image: url();
+.review-btn
+    background-image: url();
+.point-btn
+    background-image: url();
+
 /*************** AppFooter ***************/
-.AppFooter{
+.AppFooter
     width: 100%;
     text-align: center;
     position: fixed;
     bottom: 0;
-}
