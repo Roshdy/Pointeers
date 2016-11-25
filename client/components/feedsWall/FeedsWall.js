@@ -11,36 +11,46 @@ Template.FeedsWall.helpers({
 		var timestamp = now;
 		var max = 18, min = 1;
 		var randE, randP, randRs, randRv;
+		var price = 0;
+		var title = '';
 
 		for(var i = 0; i < 15; i++){
 			timestamp.setDate(timestamp.getHours() - i);
+			rnd = ((Math.random() * (1E5 - 1) + 1) * 100) / 100;
+			price = rnd.formatMoney(0, 'EGP');
 
 			randE = parseInt(Math.random() * (max - min) + min);
 			randRs = Math.random().toFixed(randE).replace(/^0[\.]/g, '');
-			randRs = formatCount(randRs);
+			randRs = randRs.formatCount();
 
 			randE = parseInt(Math.random() * (max - min) + min);
 			randRv = Math.random().toFixed(randE).replace(/^0[\.]/g, '');
-			randRv = formatCount(randRv);
+			randRv = randRv.formatCount();
 
 			randE = parseInt(Math.random() * (max - min) + min);
 			randP = Math.random().toFixed(randE).replace(/^0[\.]/g, '');
-			randP = formatCount(randP);
+			randP = randP.formatCount();
 
 			hasRep = Math.random() > 0.5;
-			rnd = parseInt(Math.random() * 100);
-			if(rnd < 25){
+			if(i == 0){
 				aspectClass = 'aspect-16-9';
 			}
-			else if(rnd < 50){
-				aspectClass = 'aspect-9-16';
-			}
-			else if(rnd < 75){
-				aspectClass = 'aspect-1-1';
-			}
 			else{
-				aspectClass = 'aspect-4-3';
+				rnd = parseInt(Math.random() * 100);
+				if(rnd < 25){
+					aspectClass = 'aspect-16-9';
+				}
+				else if(rnd < 50){
+					aspectClass = 'aspect-9-16';
+				}
+				else if(rnd < 75){
+					aspectClass = 'aspect-1-1';
+				}
+				else{
+					aspectClass = 'aspect-4-3';
+				}
 			}
+			title = i + '- Flyer Title (Ratio: ' + aspectClass.replace('aspect-','').replace('-', ':') + ')';
 
 			for(var j = 0; j < 3; j++){
 				flyerSlide = {
@@ -61,9 +71,9 @@ Template.FeedsWall.helpers({
 				isRep 			: hasRep,
 				brandName 		: 'Pointeers',
 				repName 		: 'Roshdy-' + i,
-				title 			: 'Test Flyer-' + i,
+				title 			: title,
 				hasPrice 		: true,
-				price 			: i + 1 * 49.99,
+				price 			: price,
 				loadFlyer 		: false,
 				brandLogo 		: '/images/builder-logo.png',
 				repLogo 		: '/images/builder-logo.png',

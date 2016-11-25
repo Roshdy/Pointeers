@@ -20,35 +20,42 @@ body
     padding-top: 100%;
 p
     text-overflow: ellipsis;
-
+.fleft
+    float: left;
+.fright
+    float: right;
 /*************** AppHeader ***************/
 .AppHeader 
     width: 100%;
     background-color: #99AD99;
-    height: 9.7%;
+    height: 50px;
     position: fixed;
     top: 0;
-.header-icon-left 
-    float: left;
+    z-index: 999;
+    border-bottom: 1px solid #3b4a3b;
+    .main-nav
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+.main-nav-ul
+    padding: 5px;
     text-align: center;
-    padding-top:1%;
-    padding-left: 5px;
-.header-icon-right 
-    float: right;
-    text-align: center;
-    padding-top: 1%;
-    padding-right: 5px;
-.header-app-logo 
-    text-align: center;
-    padding-top: 3%;
-    display: inline-block;
+    height: calc(100% - 10px);
+    line-height: 3em;
 .main-nav li
     display: inline-block;
+.header-icon
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #4d614d;
+    margin: 0px 2px;
 
 /*************** MainLayout ***************/
 .main-layout
     width: 96%;
     margin: auto;
+    margin-top: 55px;
 
 /*************** Interaction Buttons ***************/
 .interaction-btn 
@@ -65,12 +72,14 @@ p
         display: inline-block;
         width: 100%;
         text-align: center;
-        text-shadow: #222 0.1em 0.1em 0.2em;
+        /*text-shadow: #222 0.1em 0.1em 0.2em;*/
+        text-shadow: #b4ccb4 0.1em 0.1em 0.2em;
+        color: #3b4a3b
     .title
+        /*color: #fff;*/
         font-weight: bold;
-        color: #fff;
     .count
-        color: #ececec;
+        /*color: #ececec;*/
         font-style: italic;
 .respect-btn
     background-image: url();
@@ -78,6 +87,16 @@ p
     background-image: url();
 .point-btn
     background-image: url();
+
+/*************** LoginModal ***************/
+.login-modal
+    display: none;
+    form
+        input
+            width: 100%;
+.login-modal.open
+    display: block;
+    z-index: 9999;
 
 /*************** AppFooter ***************/
 .AppFooter
