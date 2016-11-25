@@ -65,18 +65,20 @@ Template.FeedsWall.helpers({
 			}
 
 			flyerObj = {
+				// Cover variables
 				coverImage 		: '/resources/searoom.jpg',
 				timestamp 		: timestamp.toUTCString().replace(/ GMT/, ''),
 				aspectClass 	: aspectClass,
-				isRep 			: hasRep,
 				brandName 		: 'Pointeers',
+				brandLogo 		: '/images/builder-logo.png',
+				hasRep 			: hasRep,
 				repName 		: 'Roshdy-' + i,
+				repLogo 		: '/images/builder-logo.png',
+				// Flyer variables
 				title 			: title,
 				hasPrice 		: true,
 				price 			: price,
 				loadFlyer 		: false,
-				brandLogo 		: '/images/builder-logo.png',
-				repLogo 		: '/images/builder-logo.png',
 				flyerSlide 		: flyerSlides,
 				respectsCount 	: randRs,
 				reviewsCount 	: randRv,

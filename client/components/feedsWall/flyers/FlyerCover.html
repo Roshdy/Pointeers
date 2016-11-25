@@ -1,15 +1,15 @@
 <template name="FlyerCover">
-	<div class="flyer-cover {{#if isRep}}hasRep{{/if}}">
+	<div class="flyer-cover {{#if hasRep}}hasRep{{/if}}">
 		<header class="flyer-cover-header">
 			<div class="brands-logos">
 				<img src="{{brandLogo}}" alt="Brand Logo" class="brand-logo">
-				{{#if isRep}}
+				{{#if hasRep}}
 					<img src="{{repLogo}}" alt="Rep Logo" class="rep-logo">
 				{{/if}}
 			</div>
 			<div class="brands-names">
 				<p class="brand-name">{{brandName}}</p>
-				{{#if isRep}}
+				{{#if hasRep}}
 					<p class="rep-name">{{repName}}</p>
 				{{/if}}
 				<p class="timestamp">{{timestamp}}</p>
