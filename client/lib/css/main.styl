@@ -24,6 +24,9 @@ p
     float: left;
 .fright
     float: right;
+.hidden
+    display: none !important;
+
 /*************** AppHeader ***************/
 .AppHeader 
     width: 100%;
@@ -48,8 +51,23 @@ p
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #4d614d;
     margin: 0px 2px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 80% 80%;
+.search-btn
+    background-image: url(/resources/Search.svg)
+.back-btn
+    background-image: url(/images/Header-02.png)
+.login-toggle
+    background-image: url(/resources/User.svg)
+.home-btn
+    width: 40%;
+    max-width: 200px;
+    border-radius: 0;
+    background-image: url(/resources/Builders_Logo.svg);
+    background-size: 100% 100%;
 
 /*************** MainLayout ***************/
 .main-layout
@@ -60,10 +78,10 @@ p
 /*************** Interaction Buttons ***************/
 .interaction-btn 
     > .btn
-        background-color: rgba(255,255,255,0.7);
+        background-color: transparent;
         background-repeat: no-repeat;
         background-position: center center;
-        background-size: 100% 100%;
+        background-size: 80% 80%;
         box-sizing: content-box;
         width: calc(100% - 2px);
         padding: calc(100% - 2px) 0 0 0;
@@ -82,11 +100,11 @@ p
         /*color: #ececec;*/
         font-style: italic;
 .respect-btn
-    background-image: url();
+    background-image: url(/resources/Respect.svg);
 .review-btn
-    background-image: url();
+    background-image: url(/resources/Review_Star.svg);
 .point-btn
-    background-image: url();
+    background-image: url(/resources/Point.svg);
 
 /*************** LoginModal ***************/
 .login-modal

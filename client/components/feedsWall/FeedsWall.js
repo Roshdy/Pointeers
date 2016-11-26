@@ -70,10 +70,10 @@ Template.FeedsWall.helpers({
 				timestamp 		: timestamp.toUTCString().replace(/ GMT/, ''),
 				aspectClass 	: aspectClass,
 				brandName 		: 'Pointeers',
-				brandLogo 		: '/images/builder-logo.png',
+				brandLogo 		: '/resources/Brand_Logo.svg',
 				hasRep 			: hasRep,
 				repName 		: 'Roshdy-' + i,
-				repLogo 		: '/images/builder-logo.png',
+				repLogo 		: '/resources/Brand_Rep.svg',
 				// Flyer variables
 				title 			: title,
 				hasPrice 		: true,

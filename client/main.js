@@ -4,7 +4,7 @@ Meteor.startup(() => {
         document.title = Session.get('DocTitle');
     });
     Meteor.autorun(function(){
-    	var addbar_color = '#99AD99';
+    	var addbar_color = '#4d614d';
     	Meta.set([
 			// Set character set
 	    	{
