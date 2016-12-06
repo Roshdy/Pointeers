@@ -5,21 +5,22 @@
 # but you can also edit it by hand.
 
 ################### ESSENTIALS ###################
-meteor-base             		# Packages every Meteor app needs to have.
-mobile-experience       		# Packages for a great mobile UX.
-mongo                   		# The database Meteor supports right now.
-blaze-html-templates    		# Compile .html files into Meteor Blaze views.
-reactive-var            		# Reactive variable for tracker.
-jquery                  		# Helpful client-side library.
-tracker                 		# Meteor's client-side reactive programming library.
-standard-minifier-css   		# CSS minifier run for production mode.
-standard-minifier-js    		# JS minifier run for production mode.
-es5-shim                		# ECMAScript 5 compatibility for older browsers.
-ecmascript              		# Enable ECMAScript2015+ syntax in app code.
-spiderable						# Allows web engines to index meteor app
-fastclick 						# Touch support for less laggy UX.
-session							# Enables the usage of client session variable.
-check 							# Argument checking and general pattern matching.
+meteor-base@1.0.4             		# Packages every Meteor app needs to have.
+#mobile-experience       			# Packages for a great mobile UX.
+mongo@1.1.14                   		# The database Meteor supports right now.
+blaze-html-templates    			# Compile .html files into Meteor Blaze views.
+reactive-var@1.0.11            		# Reactive variable for tracker.
+jquery@1.11.10                  	# Helpful client-side library.
+tracker@1.1.1                 		# Meteor's client-side reactive programming library.
+standard-minifier-css@1.3.2   		# CSS minifier run for production mode.
+standard-minifier-js@1.2.1    		# JS minifier run for production mode.
+es5-shim@4.6.15                		# ECMAScript 5 compatibility for older browsers.
+ecmascript@0.6.1              		# Enable ECMAScript2015+ syntax in app code.
+spiderable@1.0.14-release-testing.0	# Allows web engines to index meteor app
+mobile-status-bar@1.0.13			# Mobile fiendly plugin
+meteorhacks:fast-render				# Mobile friendly plugin
+session@1.1.7						# Enables the usage of client session variable.
+check@1.2.4 						# Argument checking and general pattern matching.
 #datariot:ganalytics				# Google Analytics.
 ###################################################
 
@@ -50,8 +51,14 @@ aldeed:autoform					# Easily insert and update collections through UI.
 ################## Authentication #################
 useraccounts:unstyled			# Meteor user accounts unstyled
 aldeed:template-extension		# Overriding user accounts form templates
-accounts-password				# A login service that enables secure password-based login.
-accounts-oauth 					# Common code for OAuth-based login services.
+accounts-password@1.3.3			# A login service that enables secure password-based login.
+accounts-ui 					# Automatic accounts UI
+service-configuration 			# Manage the configuration for third-party services
+accounts-facebook				# Accounts service for Facebook accounts
+accounts-google 				# Accounts service for Google accounts
+pauli:linkedin 					# An OAuth2 wrapper for the LinkedIN API
+pauli:accounts-linkedin			# Accounts service for LinkedIn accounts
 alanning:roles					# Authorization package for Meteor.
 gwendall:auth-client-callbacks 	# Adds client-side onLogin and onLogout methods.
 ###################################################
+shell-server

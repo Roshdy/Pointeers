@@ -1,5 +1,8 @@
 Template.LoginModal.events({
-	'click .close-login': ()=> {
-		Session.set('loginModal-toggle', '');
+	'show.bs.modal #Login-Modal': ()=> {
+		$('body').addClass('modal-open');
+	},
+	'hidden.bs.modal #Login-Modal': ()=> {
+		$('body').removeClass('modal-open');
 	}
 });

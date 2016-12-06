@@ -2,13 +2,17 @@
     <header class="AppHeader">
     	<nav class="main-nav">
     		<ul class="main-nav-ul">
-    			<li class="fleft search-btn header-icon"></li>
+    			<li class="fleft search-btn header-icon">
+                    <button type="button"></button>         
+                </li>
                 <li class="fleft hidden back-btn header-icon"></li>
                 <li class="fcenter home-btn header-icon"></li>
-                <li class="fright login-toggle header-icon"></li>
+                <li class="fright login-toggle header-icon">
+                    <!-- Button trigger modal -->
+                    <button type="button" data-toggle="modal" data-target="#Login-Modal">
+                    </button>
+                </li>
     		</ul>
     	</nav>
     </header>
-
-    {{> LoginModal}}
 </template>

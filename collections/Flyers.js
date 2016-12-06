@@ -133,6 +133,6 @@ FlyersSchema = new SimpleSchema({
 });
 
 // 4- Attach Schema to Collection
-
+Flyers.attachSchema(FlyersSchema);
 
 // 5- Define public methods

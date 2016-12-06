@@ -1,7 +1,11 @@
 /*************** General ***************/
 body
     background-color: #4d614d !important;
-
+    width: 100%;
+    &.modal-open
+        overflow: hidden;
+*
+    box-sizing: border-box;
 /*************** Shared ***************/
 [class*="aspect"] 
     position: relative;
@@ -26,7 +30,29 @@ p
     float: right;
 .hidden
     display: none !important;
-
+/*************** Modal ***************/
+.modal.centered
+    position: fixed;
+    top: 20%;
+    left: 0;
+    width: auto;
+    height: auto;
+    max-height: 70%;
+    background: #FFF;
+    opacity: 0;
+    overflow: auto;
+    display: none;
+    &.in
+        display: block;
+        opacity: 1;
+        transform: translateX(-50%) scale(1);
+        vertical-align: middle;
+    @media (max-width: 767px)
+        &.in
+            left: 50%;
+            width: 80%;
+            transform: translate3d(25%, -80%, 0) scale(0.5);
+            top: 15% !important;
 /*************** AppHeader ***************/
 .AppHeader 
     width: 100%;
@@ -58,10 +84,20 @@ p
     background-size: 80% 80%;
 .search-btn
     background-image: url(/resources/Search.svg)
+    > button
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border-radius: 50%;
 .back-btn
     background-image: url(/images/Header-02.png)
 .login-toggle
-    background-image: url(/resources/User.svg)
+    background-image: url(/resources/User.svg);
+    > button
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border-radius: 50%;
 .home-btn
     width: 40%;
     max-width: 200px;
@@ -106,16 +142,6 @@ p
     background-image: url(/resources/Review_Star.svg);
 .point-btn
     background-image: url(/resources/Point.svg);
-
-/*************** LoginModal ***************/
-.login-modal
-    display: none;
-    form
-        input
-            width: 100%;
-.login-modal.open
-    display: block;
-    z-index: 9999;
 
 /*************** AppFooter ***************/
 .AppFooter
