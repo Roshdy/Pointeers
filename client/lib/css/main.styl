@@ -6,6 +6,12 @@ body
         overflow: hidden;
 *
     box-sizing: border-box;
+input
+    max-width: 100%;
+    margin: 0 !important;
+.submit
+    width: 100%;
+    border-radius: 6px;
 /*************** Shared ***************/
 [class*="aspect"] 
     position: relative;
@@ -45,14 +51,15 @@ p
     &.in
         display: block;
         opacity: 1;
-        transform: translateX(-50%) scale(1);
-        vertical-align: middle;
     @media (max-width: 767px)
         &.in
-            left: 50%;
-            width: 80%;
-            transform: translate3d(25%, -80%, 0) scale(0.5);
+            left: 15%;
+            right: 15%;
             top: 15% !important;
+.at-social-btn
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 3px;
 /*************** AppHeader ***************/
 .AppHeader 
     width: 100%;
